@@ -17,3 +17,18 @@ const initials = firstLetter(names);
 console.log(initials); 
 
 // Risultato atteso: ["A", "L", "M", "A", "G", "A"]
+
+
+//!---------------------------------------------------------------------------------------
+
+
+const names = ["Anna", "Luca", "Marco", "Adele", "Giovanni", "Alessandra"];
+
+//dichiarazione della funzione 
+function firstLetter(arr){
+
+  return arr.map(name => name[0])
+}
+
+const initials = firstLetter(names)
+console.log(initials)

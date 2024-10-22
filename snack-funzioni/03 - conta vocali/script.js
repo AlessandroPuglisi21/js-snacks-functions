@@ -1,23 +1,23 @@
-/* Scrivi una funzione che accetti una stringa e restituisca il numero di vocali contenute al suo interno */
+function countVowels(string) {
+  // Definire un insieme di vocali
+  const vowels = ['a', 'e', 'i', 'o', 'u'];
+  
+  // Creare un contatore per le vocali
+  let count = 0;
 
-const word = 'javascript';
-const vocali = ["a","e","i","o","u"]
-
-
-// Dichiara la funzione qui.
-function vocalNumber(word, vocali){
-let numeber = 0;
-for(let i = 0; i<word.length; i++){
-
-    if(vocali.includes(word[i])) {
-        numeber++
+  // Ciclo attraverso ogni lettera della stringa
+  for (let i = 0; i < string.length; i++) {
+    const letter = string[i].toLowerCase(); // Converti la lettera in minuscolo per evitare problemi con maiuscole
+    
+    // Verifica se la lettera è una vocale
+    if (vowels.includes(letter)) {
+      count++; // Incrementa il contatore
     }
   }
-  return numeber;
+
+  return count; // Restituisce il numero di vocali
 }
-// Invoca la funzione qui e stampa il risultato in console
 
-const result=vocalNumber(word, vocali);
-console.log(result,)
-
-//Risultato atteso se si passa 'javascript': 3 (a, a, i)
+const word = 'pippoepaperino'; 
+const numVowels = countVowels(word);
+console.log(numVowels);
